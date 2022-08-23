@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 body {
   font-family: sans-serif;
@@ -10,7 +11,9 @@ body {
   border: 4px solid black;
   margin: 50px auto;
 }
-
+.small-container {
+  background-color: antiquewhite;
+}
 h2 {
   padding: 15px;
   text-align: center;
@@ -40,10 +43,13 @@ h2::after {
 .price {
   font-weight: bold;
   font-size: 24px;
+  float: left;
 }
 #shipping {
   font-size: 12px;
   text-transform: uppercase;
+  float: right;
+  margin-top: 5px;
 }
 a:link,
 a:visited {
@@ -58,11 +64,12 @@ a:active {
   text-decoration: underline;
   cursor: pointer;
 }
-.image {
+/* .image {
   padding-top: 20px;
-}
+} */
 .message {
   padding: 10px 0px;
+  clear: both;
 }
 ul {
   list-style: square;
@@ -125,4 +132,27 @@ li {
 }
 .navLinks p:last-child {
   background-color: rgba(123, 30, 30, 0.593);
+}
+
+.class-image {
+  /* display: inline-block; */
+
+  float: left;
+}
+.container-price {
+  margin-top: 20px;
+  width: 240px;
+  margin-left: 40px;
+  box-sizing: border-box;
+  float: left;
+}
+.container-details {
+  margin-left: 40px;
+  float: left;
+  width: 240px;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
